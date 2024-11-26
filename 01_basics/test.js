@@ -14,7 +14,7 @@ console.log("hello");
 // node test.js
 
 // 5. how to setup your project on git hub
-//  create prpository
+//  create rpository
 // public
 // code space
 // add dev container config file
