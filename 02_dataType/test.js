@@ -70,4 +70,4 @@
     // console.log(typeof  object) // undefine
 
     // 9.
-    console.log(typeof  NaN) // number
+    // console.log(typeof  NaN) // number
