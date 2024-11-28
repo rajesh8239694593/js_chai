@@ -20,7 +20,7 @@
 // let x = 5;
 
 // reassign
-// const cars = ["Saab", "Volvo", "BMW"];
+// let cars = ["Saab", "Volvo", "BMW"];
 
 // cars = ["Toyota", "Volvo", "Audi"]; 
 
@@ -39,6 +39,7 @@ accountCity = "jaipur"
 // 4.how many console method??
 // Ans..a. console.log()
 //      b. console.table([])
+//      c. console.error()
 
 accountCity = "pune"
 accountPassword ="1234"
@@ -51,8 +52,8 @@ console.table([accountCity, accountPassword, accountEmail])
 // not use var ,because issue in block and function scope
 // always use let and const
 
-let accountState;
-console.log(accountState)
+// let accountState;
+// console.log(accountState)                                  //undefined
 
 // 6.when will occure output undefine
 // when a variable declare but not assign value

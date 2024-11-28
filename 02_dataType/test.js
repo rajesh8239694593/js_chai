@@ -29,15 +29,15 @@
 // Ans. 8
     // 1.string  // ""
     // 2.Number  //2**53-1
-    // 3.bigint
+    // 3.bigint   //808080809808080808908098n
     // 4.boolean  //true/false
     // 5.null     // represtation of empty value or a standalon value // example temp from server
-    // 6.undefine  //let id; brabr likhti he wo isse value maanig// value assign krni hogi nhi to error dega
+    // 6.undefine  //let id; brabr likhti he wo isse value maaniga// value assign krni hogi nhi to error dega
     // 7.symbol    // unique
-    // 8.object
+    // 8.object    //key value pair
 
 
-// 6. tell me about typeof and anser these type of
+// 6. tell me about typeof and answer these type of
     // 1.
     // console.log(typeof '')  //string
     
@@ -67,7 +67,10 @@
     // console.log(typeof  true)  //error because we cannot declare a variabe with reserve keyword
 
     // 8.
-    // console.log(typeof  object) // undefine
+    // console.log(typeof  object) // undefine   //object isnot a keyword
 
     // 9.
     // console.log(typeof  NaN) // number
+
+    // 10.
+    //  console.log(typeof undefined);             //undefined

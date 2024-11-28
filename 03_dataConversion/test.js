@@ -26,6 +26,8 @@
 
 // console.log(score)                                                   // null
 
+// let score = null
+
 // let valueInNumber = Number(score)
 
 // console.log(typeof valueInNumber)                                     // number

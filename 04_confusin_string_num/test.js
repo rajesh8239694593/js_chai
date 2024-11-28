@@ -1,7 +1,7 @@
 // 1.js operations 
 //  let a = 3
 //  let negValue = -a
-//  console.log(negValue)
+//  console.log(negValue)                       //-3
 
 
 // 2.ans the following operation
@@ -20,7 +20,9 @@
 // console.log(1 + "2")                                     //12
 // console.log("1" + 2 + 2 )                                //122
 // console.log(1 + 2 + "2" )                                //32
+// console.log(1 + 2 + 2 + "2" )                              //52
 // console.log(3 + 4 * 5 % 3 )                                //5
+
 
 // console.log(true)                                     //true
 // console.log(+true)                                     //1  because increment
@@ -40,7 +42,7 @@
 
 // gameCounter++;
 
-// console.log(gameCounter);
+// console.log(gameCounter);          //101
 
 // or
 
@@ -48,9 +50,25 @@
 
 // ++gameCounter;
 
-// console.log(gameCounter);
+// console.log(gameCounter);                 //101
 
+// or
+
+// let gameCounter1 = 100                     //using prefix
+
+// console.log(gameCounter1++);               //100
+
+// // 
+
+
+// let gameCounter = 100                     //using prefix
+
+// console.log(++gameCounter);               //101
+
+// ************note**************
+// ************note**************  post increment ++++ post increment first use
 
 
 // 6.prefix and postfix increment in js read it
 
+// post increment ++++ post increment first use
