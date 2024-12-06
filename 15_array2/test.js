@@ -6,9 +6,9 @@
 
 //  let mixHeros = marvalHeros.push(dcHeros);
 
-//  console.log(mixHeros)                           //4
+//  console.log(mixHeros)                                                                            //4
 
-//  console.log(marvalHeros)                       //[ 'ironMan', 'spiderMan', 'thor', [ 'superMan', 'flash', 'batMan' ] ]
+//  console.log(marvalHeros)                                                                         //[ 'ironMan', 'spiderMan', 'thor', [ 'superMan', 'flash', 'batMan' ] ]
 
 //  console.log(marvalHeros[3][1])                 //flash
 

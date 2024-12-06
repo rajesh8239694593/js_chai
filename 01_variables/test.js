@@ -44,9 +44,12 @@ accountCity = "jaipur"
 accountCity = "pune"
 accountPassword ="1234"
 accountEmail = "hh@tt.com"
-// accountId = 11122
 
-console.table([accountCity, accountPassword, accountEmail])
+// accountId = 11122
+ 
+// *******note *********** handle of large data
+// console.table([accountCity, accountPassword, accountEmail])               // table print kriga index adn values ko
+// console.log ( accountCity, accountPassword, accountEmail)                 //pune 1234 hh@tt.com
 
 // 5.*******note*****
 // not use var ,because issue in block and function scope

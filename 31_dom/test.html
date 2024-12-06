@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title> 
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 id ="title"class="heading"> dom learning chai or<span style="display: none;">jai shree ram</span> code</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li clss = "items">one</li>
+            <li clss = "items">two</li>
+            <li clss = "items">two</li>
+            <li clss = "items">two</li>
+        </ul> 
+   </div>
+</body>
+</html>
+
+
+<!-- 1. what is dom -->
+<!-- Ans.The Document Object Model (DOM) is a programming interface for web documents.
+  It represents the structure of a webpage as a tree of objects, allowing developers
+   to manipulate content, structure, and styles dynamically. Each element in an 
+   HTML document becomes a node in the DOM tree, and JavaScript can be used to
+    interact with these nodes to modify or retrieve information. -->
+
+<!-- 2. what is bom -->
+ <!-- 
+The Browser Object Model (BOM) provides a way to interact with the browser window and 
+its features using JavaScript. It focuses on browser-specific objects like 
+the window, navigator, history, location, and screen. -->
+
+<!-- 3.difference between console.log(window.document)
+  and console.log(document) and console.log(window) and console.dir(document) -->
+
+<!-- console.log(window): Logs the global window object, which includes the document 
+ and other BOM properties (e.g., location, history). -->
+
+<!-- console.log(window.document): Logs the document object as part of the window object.
+  Equivalent to console.log(document). -->
+
+<!-- console.log(document): Logs the DOM document object directly. 
+ It's the same as window.document. -->
+
+<!--console.dir(document): Logs the document object as an interactive tree structure, 
+showing all its properties and methods for debugging.  -->
+
+
+<!--3. dom diagram of above text -->
+
+
+
+<!--
+****** EVERYTHING IS A NODE ******
+
+                 WINDOW
+                   |
+                DOCUMENT
+                   |
+                  HTML
+                 /    \
+              HEAD    BODY
+             /   |       \
+         META  TITLE     DIV
+         |       |         \
+   ATTRIBUTE  TEXT_NODE      |
+                              |
+                             SECTION
+                            /      \
+                          H1        P
+                         / \          \
+                 ATTRIBUTE TEXT_NODE  TEXT_NODE
+
+ ATTRIBUTE LIKE--CLASS-HEADING OR ID OR STYLE ETC
+-->             
+
+
+<!--4. how to reach h1 in above html -->
+
+<!-- 5.how to get all anchor tag of a page -->
+ <!-- Ans. console.log(document.links)
+           console.log(document.links[2]-- to get second link) -->
+
+<!--6.how i get h1 complete tag and his all content and attributes -->
+
+<!-- document.getElementById("heading") -->
+ <!-- i will get-- <h1 id="test" class="heading"> dom learning chai or code</h1> -->
+
+ <!-- 7.element or attribute or properties -->
+
+ <!-- 8.console.log(document.links) data get in the form of -->
+  <!-- htmlCollection or nodeList -->
+
+  <!-- 9. difference between  htmlCollection or nodeList or array  -->
+
+  <!-- 
+Feature             	HTMLCollection	        NodeList	              Array
+Live/Static            	Always live	           Static or live	          Static
+Iterable	            No (use for loop)	   Yes (forEach, etc.)	   Yes (map, etc.)
+Methods	                Limited (item())	   Limited (forEach())	   Full array methods
+Conversion to Array   	Use Array.from()	      Use Array.from()	         N/A
+ -->
+
+ <!-- 10.how to select id in html page -->
+  <!-- document.getElementById('heading') -->
+
+<!-- 10. after select element how to change element content -->
+ <!-- document.getElementById('heading').innerHtml = "lorem10" -->
+  <!-- this is called dom element -->
+
+<!-- 11. how to access attribute of element like h1-->
+ <!-- document.getElementById('title').id
+    output =='title' -->
+ <!-- document.getElementById('title').class
+    error -->
+ <!-- document.getElementById('title').className
+    'heading' -->
+ <!-- document.getElementById('title').innerHtml
+      document.getElementById('title').innerText -->
+
+<!--12.other way to access attribute of element like h1-->
+<!--  document.getElementById('test').getAttribute("id")
+'test'
+ document.getElementById('test').getAttribute("class")
+'heading'
+ document.getElementById('test').getAttribute("innerHtml")
+null
+ document.getElementById('test').getAttribute("innerText")
+null -->
+
+<!-- 11. how to change set or  attribute of element like h1-->
+ <!-- ***note*** it always overwrite the main content -->
+<!-- document.getElementById("title").setAttribute("class", "hello")
+document.getElementById("title").setAttribute("id", "hello")
+ -->
+
+<!-- 12. how to give style for elements -->
+ <!-- const hello = document.getElementById("title")
+hello.style.backgroundColor = "red"
+'red'
+const hello = document.getElementById("title")
+hello.style.borderRadius = "15px"
+'15px'
+const hello = document.getElementById("title")
+hello.style.padding = "15px"
+'15px' -->
+
+<!-- 13. how to get content  -->
+
+<!--  const hello = document.getElementById("title")
+  hello.innerText
+  'dom learning chai or code'   -- wo hi text aayega jo visible h --display none nhi dhekhiga 
+
+   hello.textContent
+  'dom learning chai or jai shree ram code'   -- pura text dhekhayega display:none wala bhi
+
+   hello.innerHTML
+   'dom learning chai or <span style="display: none;">jai shree ram</span> code' // tag ki ander ka tag bhi aayega
+   ****note***Html nhi pura HTML capital m h
+   -->
+
+<!--14. how many selector in dom  -->
+<!-- getElementById
+
+document.getElementById('id')
+getElementsByClassName
+
+document.getElementsByClassName('className')
+getElementsByTagName
+
+document.getElementsByTagName('tagName')
+querySelector
+
+document.querySelector('selector')
+querySelectorAll
+
+document.querySelectorAll('selector')
+childNodes
+
+element.childNodes
+firstChild
+
+element.firstChild
+lastChild
+
+element.lastChild
+parentNode
+
+element.parentNode
+nextSibling
+
+element.nextSibling
+previousSibling
+
+element.previousSibling
+matches
+
+element.matches('selector')
+Attribute Selector
+
+document.querySelector('[attribute="value"]')
+:first-child
+
+element.querySelector(':first-child')
+:last-child
+
+element.querySelector(':last-child')
+:nth-child(n)
+
+element.querySelector(':nth-child(n)')
+:nth-of-type(n)
+
+element.querySelector(':nth-of-type(n)')
+:not(selector)
+
+element.querySelector(':not(selector)')
+:empty
+
+element.querySelector(':empty')
+:focus
+
+element.querySelector(':focus')
+:checked
+
+element.querySelector(':checked')
+:disabled
+
+element.querySelector(':disabled')
+:enabled
+
+element.querySelector(':enabled')
+:target
+
+element.querySelector(':target')
+:lang(language)
+
+element.querySelector(':lang(language)')
+:root
+
+element.querySelector(':root')
+::before
+
+element.querySelector('::before')
+::after
+
+element.querySelector('::after')
+::first-letter
+
+element.querySelector('::first-letter')
+::first-line
+
+element.querySelector('::first-line') -->
+
+<!-- 15.differencr between querySelector() and querySelectorAll()-->
+ <!-- querySelector('h1') 
+  only first h1 ko select krigi-->
+
+<!--  querySelector('.class') 
+   querySelector("#title') 
+    ******note**** yha pr hum sari css selector use kr skti h
+    
+     querySelector('input[type = "password"]')-->
+
+<!-- 16. <div>
+ <p>1</p>
+ <p>2</p>
+ <p>3</p>
+ <p>4</p>
+ <p>5</p>
+</div> 
+ismi si first paragraph select kro
+querySelector('p:firstChild')-->
+
+<!-- 17.<ul>
+    <li>one</li>
+    <li>two</li>
+    <li>two</li>
+    <li>two</li>
+</ul>  
+first li ka color change kro query selector pr query selector chla kr
+inner text ko hello likhoo
+
+const chngeColor = querySelector('ul')
+const changeColor1 = changeColor.querySelector('li')---by default first child he select kriga
+ changeColor1.style.BackgroudColor = "green"
+  changeColor1.innerText = "green"
+-->
+
+
+ <!-- 18.how to use querySelectorAll and what it return -->
+  <!-- it select all same type item like all h1 ,p or same class name , same id -->
+   <!-- return a node list -->
+    <!-- <ul>
+    <li>one</li>
+    <li>two</li>
+    <li>two</li>
+    <li>two</li>
+</ul>  
+q. change all list background color
+
+ const liList = document.querySelectorAll('li')
+ liList[0].style.backgroundColor = "green"
+
+ //ye node list return krta h to ya to loop lagaaoo ya index no. do
+
+ liList.foreach((item) => {
+ item.style.backgroundColor = "green"})
+-->
+
+  <!-- 19.
+     <ul>
+    <li clss = "items">one</li>
+    <li clss = "items">two</li>
+    <li clss = "items">two</li>
+    <li clss = "items">two</li>
+</ul> 
+manuplate using class name
+ -->
+<!-- const listItems = document.getElementByClassName(".items")
+ typeof = html collection dega
+
+ for(let i = 0; i < listItems.lenth ; i++){
+ listItems[i].backgroundColor = "red"
+
+ }
+-->
+
+<!-- 20. how to convert html collection and nodelist in array and why we need to convert this list -->
+ <!-- use Array.form(listItems) -->
+
+
+<!-- 21. go to wikipedia page like---
+  change all h2 background color
+  
+  const allheading = document.getElementsByTagName("h2")
+console.log(allheading)
+const arrHeading = Array.from(allheading)
+arrHeading.map((items) => { items.style.backgroundColor = "red"})
+
+arrHeading.map((items) => { items.innerHTML = "Rajesh"})
+
+arrHeading.map((items) => { items.style.padding = "15px"})
+  -->

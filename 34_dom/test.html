@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="langugae">
+        <li>javascript</li>
+    </ul>
+    <script>
+        // function addlanguage (lange) {
+        //     const li = document.createElement("li")
+        //     li.innerText = `${lange}`
+        //     document.querySelector(".langugae").appendChild(li)
+        // }
+        // addlanguage("python")
+        // addlanguage("typeScript")
+
+        //or
+
+        function addOptiLang (langName) {
+            const li = document.createElement("li")
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.langugae').appendChild(li)
+        }
+        addOptiLang("golang")
+        addOptiLang("python")
+        addOptiLang("typeScript")
+
+        const changLang = document.querySelector("li:nth-child(2)")
+        // console.log(changLang)
+        // console.log(typeof changLang)
+        // changLang.innerHTML = "java"   **********note a good pracite  it give error
+        // document.appendChild(langugae)
+       const newLi = document.createElement("li")
+       newLi.textContent = "mojo"
+       changLang.replaceWith(newLi)
+
+       const firstLi = document.querySelector('li:first-child')
+       firstLi.outerHTML = '<li>go</li>'
+    //   console.log(lastLi)
+    //   console.log(typeof lastLi)
+      
+       const lastChild = document.querySelector("li:last-child")
+       lastChild.remove()
+    </script>
+</body>
+</html>
+
+<!-- 1.how to attach li dynamically  it is basic and a  problem that complete tree is travese-->
+
+<!-- 2. optiemize way to add language -->
+
+<!-- 3. how to edit element second li -->
+
+<!-- 4. how to remove li -->

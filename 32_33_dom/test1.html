@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   const div =  document.createElement('div')
+   console.log(div)
+
+   div.className = "main";
+   div.id = Math.round(Math.random() * 10 +1)
+   div.setAttribute("title", "generated title")
+   div.innerText = "i know the javascripts basics"
+
+//or
+
+//    const  addText = document.createTextNode("i know the javascripts basics")
+//    div.appendChild(addText)
+   div.style.backgroundColor = "green"
+   div.style.color = "white"
+   div.style.padding = "15px"
+   document.body.appendChild(div)
+
+</script>
+</html>
+
+
+
+<!-- 1. how to create div element in js  -->
+
+<!-- 2. how to add properties or attributes in div -->
+
+<!-- 3. how to use set attribute-->
+
+<!-- 4. how to give style -->
+
+
+<!-- 4. why we create text node  after append or use innerHtml-->
+
+<!-- 5. how to append div in body -->

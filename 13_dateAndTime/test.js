@@ -117,12 +117,28 @@
 
 
 // 1. Display Current Date and Time
-// You are building a blog, and each post needs to display the current date and time when published.
 
-// Question:
 
-// Write a function to display the current date and time in this format:
+//1. You are building a blog, and each post needs to display the current date and time when published.
+
+
+//    const publishedDate = new Date().toLocaleString()
+   
+//    console.log(publishedDate)           //  11/30/2024, 5:22:33 PM
+
+
+
+// 2.Write a function to display the current date and time in this format:
 // Wednesday, November 29, 2024, 10:45 AM.
+
+  const displayTimeFormat  = (() => {
+    let dateFormat = new Date()
+    return `{dateFormat.getDay()}`
+  })
+
+  console.log(displayTimeFormat())
+
+
 // 2. Countdown Timer for an Event
 // You are building a countdown timer for an upcoming sale on your e-commerce site.
 

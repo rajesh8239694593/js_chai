@@ -28,9 +28,9 @@
 
 // 4.after decimal how to define number of values
 
-// const score = 783.423456789
+const score = 783.423456789
 
-// console.log(score.toFixed())                 //783 **** it will give
+console.log(score.toFixed())                 //783 **** it will give
 //                                              // 783.423456789 =783,, 783.523456789 =784
 
 // console.log(score.toFixed(1))                //783.4
